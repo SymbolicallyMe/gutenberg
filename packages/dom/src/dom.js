@@ -157,7 +157,7 @@ export function getRectangleFromRange( range ) {
 		const { x, y, height } = range.startContainer.getBoundingClientRect();
 
 		// Create a new DOMRect with zero width.
-		return new DOMRect( x, y, 0, height );
+		return tinymce.geom.Rect.create( x, y, 0, height );
 	}
 
 	// For normal collapsed ranges (exception above), the bounding rectangle of
